@@ -2,10 +2,12 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
          initListButton();
          initNoteButton ();
          initSettingButton();
+        initPriority ();
+
 
 
 }
@@ -43,6 +47,27 @@ public class MainActivity extends AppCompatActivity {
     private void initNoteButton(){
         ImageButton ibSetting = findViewById(R.id.imageButtonNote);
         ibSetting.setEnabled(false);
+
+    }
+
+    private void initPriority(){
+        String notePriority = getSharedPreferences("MyPriorityPreferences",
+                Context.MODE_PRIVATE).getString("notePriority","noPriority");
+
+
+        RadioButton rdLow = findViewById(R.id.radioLow);
+        RadioButton rdMed = findViewById(R.id.radioMed);
+        RadioButton rbHigh = findViewById(R.id.radioHigh);
+        if (notePriority.equalsIgnoreCase("Low")){
+            rdLow.setChecked(true);
+        }
+        else if (notePriority.equalsIgnoreCase("Med")){
+            rdMed.setChecked(true);
+        }
+        else {
+            rbHigh.setChecked(true);
+        }
+
 
     }
 }

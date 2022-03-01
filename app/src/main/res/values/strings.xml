@@ -11,4 +11,14 @@
     <string name="descending">Descending</string>
     <string name="togglebutton">togglebutton</string>
     <string name="save">save</string>
+    <string name="priority">Priority</string>
+    <string name="subject">Subject</string>
+    <string name="add_a_note">Add a note</string>
+    <string name="Priority">Priority:</string>
+    <string name="low">Low</string>
+    <string name="med">Med</string>
+    <string name="high">High</string>
+    <string name="displays_des">displays des</string>
+    <string name="settings">settings</string>
+    <string name="note">Note</string>
 </resources>

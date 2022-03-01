@@ -32,10 +32,10 @@
             android:text="@string/date" />
 
         <RadioButton
-            android:id="@+id/radioP"
+            android:id="@+id/radioPriority"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/p" />
+            android:text="@string/priority" />
 
         <RadioButton
             android:id="@+id/radioSubject"
@@ -95,7 +95,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/note"
-            tools:ignore="RedundantDescriptionCheck" />
+            tools:ignore="RedundantDescriptionCheck,SpeakableTextPresentCheck"
+            android:contentDescription="TODO" />
 
         <ImageButton
             android:id="@+id/imageButtonList"

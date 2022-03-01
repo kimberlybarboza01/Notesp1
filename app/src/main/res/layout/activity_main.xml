@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:text="Subject"
+        android:text="@string/subject"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
@@ -60,7 +60,8 @@
         android:imeOptions="actionNext"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSubject"/>
+        app:layout_constraintTop_toBottomOf="@+id/textSubject"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textNote"
@@ -68,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="Note"
+        android:text="@string/note"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editSubject" />
 
@@ -83,7 +84,7 @@
         android:layout_marginEnd="20dp"
         android:layout_weight="1"
         android:gravity="top"
-        android:hint="Add a note"
+        android:hint="@string/add_a_note"
         android:inputType="textMultiLine"
         android:maxLines="50"
         android:padding="70dp"
@@ -99,37 +100,37 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="17dp"
-        android:text="Priority:"
+        android:text="@string/Priority"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editNote" />
 
     <RadioGroup
+        android:id="@+id/radioPriority"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="250dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView3">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioLow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Low" />
+            android:text="@string/low" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioMed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Med" />
+            android:text="@string/med" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioHigh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="High" />
+            android:text="@string/high" />
     </RadioGroup>
 
     <LinearLayout
@@ -148,14 +149,15 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/note"
-            tools:ignore="RedundantDescriptionCheck" />
+            tools:ignore="RedundantDescriptionCheck,SpeakableTextPresentCheck"
+            android:contentDescription="TODO" />
 
         <ImageButton
             android:id="@+id/imageButtonList"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:contentDescription="displays des"
+            android:contentDescription="@string/displays_des"
             app:srcCompat="@drawable/list"
             tools:ignore="RedundantDescriptionCheck" />
 
@@ -164,7 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:contentDescription="settings"
+            android:contentDescription="@string/settings"
             app:srcCompat="@drawable/settings"
             tools:ignore="RedundantDescriptionCheck" />
     </LinearLayout>
