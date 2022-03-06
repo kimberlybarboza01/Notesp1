@@ -10,12 +10,12 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-public class Settings extends AppCompatActivity {
+public class NoteSettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_settings2);
         initListButton();
         initNoteButton ();
         initSettingButton();
@@ -29,7 +29,7 @@ public class Settings extends AppCompatActivity {
         ImageButton ibList = findViewById(R.id.imageButtonList);
         ibList.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(Settings.this, List.class);
+                Intent intent = new Intent(NoteSettingsActivity.this, NoteListActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP );
                 startActivity(intent);
             }
@@ -40,7 +40,7 @@ public class Settings extends AppCompatActivity {
         ImageButton ibMap = findViewById(R.id.imageButtonNote);
         ibMap.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent intent = new Intent(Settings.this, MainActivity.class);
+                Intent intent = new Intent(NoteSettingsActivity.this, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
@@ -124,5 +124,4 @@ public class Settings extends AppCompatActivity {
         });
     }
 
-}
 }

@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="displays_des">displays des</string>
-    <string name="settings">settings</string>
     <string name="date">Date</string>
     <string name="p">p</string>
-    <string name="subject">Subject</string>
     <string name="sort_item">Sort Item</string>
     <string name="sort_order">Sort Order</string>
     <string name="ascending">Ascending</string>

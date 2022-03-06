@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".Settings"
+            android:name=".NoteSettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".List"
+            android:name=".NoteListActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

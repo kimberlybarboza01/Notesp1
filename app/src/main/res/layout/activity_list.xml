@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".List">
+    tools:context=".NoteListActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -20,11 +20,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
             android:text="Delete:"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/textBatteryLevel"
@@ -36,11 +36,11 @@
             android:layout_marginRight="8dp"
             android:text="100%"
             app:layout_constraintBaseline_toBaselineOf="@id/switchDelete"
-            app:layout_constraintEnd_toStartOf="@+id/buttonAddContact"
+            app:layout_constraintEnd_toStartOf="@+id/buttonAddNote"
             app:layout_constraintStart_toEndOf="@+id/switchDelete" />
 
         <Button
-            android:id="@+id/buttonAddContact"
+            android:id="@+id/buttonAddNote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -67,7 +67,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/note"
-            tools:ignore="RedundantDescriptionCheck" />
+            tools:ignore="RedundantDescriptionCheck,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/imageButtonList"
@@ -89,7 +89,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvContacts"
+        android:id="@+id/rvNotes"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
